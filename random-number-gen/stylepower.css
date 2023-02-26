@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#generador{
+    text-align: center;
+}
+
+#colorin { text-align: center; }
+
+#hazclick {
+    font-size: 1rem;
+    color: antiquewhite;
+    background-color: green;
+    padding: 1rem;
+    border: 1px blue solid;
+    border-radius: 0.5rem;
+    float: right;
+}
+
+#nohagasclick {
+    font-size: 1rem;
+    color: antiquewhite;
+    background-color: red;
+    padding: 1rem;
+    border: 1px blue solid;
+    border-radius: 1rem;
+    float: left;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.color-container {
+    background-color: orange;
+    width: 200px;
+    height: 100px;
+    color: antiquewhite;
+    margin: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5) ;
+    border: solid black 3px;
+    border-radius: 5px;
+}
+
+.color-press {
+    align-items: center;
+}
+
+/* ________________________________ */
+
+
+.contenedor-contador {
+    justify-content: center;;
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
+.counter{
+    font-size: 2rem;
+    color: bisque;
+    background-color: #0037AA;
+    padding: 1rem;
+    border: 1px #0037AA solid;
+    border-radius: 2rem;
+    align-self: center;
+}
+
+.counter button {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: aquamarine;
+}
+
+
+#dadohide {
+    
+    position: relative;
+    align-items: center;
+}
+
+#tabla-dados {
+    
+}
+
+#dadorojo {
+    background-color: red;
+}
+
+#dadoverde {
+    background-color: green;
+}
+
+#tirada1 {
+    color: red;
+}
+
+#tirada2 {
+    color: green;
+}
+
+#tirada1, #tirada2 {
+    font-weight: bold;
+}
+
+#dadorojo, #dadoverde{
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#reload {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #0037AA;
+}

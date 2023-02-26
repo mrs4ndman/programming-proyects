@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te genero colorines</title>
+    <link rel="stylesheet" href="stylepower.css">
+    <script src="contadorin.js" defer></script>
+</head>
+<body>
+    <h1 id="generador">Generador de colorines aleatorio</h1>
+    <div class="pressdiv">    
+        <h2 id="colorin">Colorines</h2>
+        <input id="hazclick" type="button" value="Do click plz">
+        <input id="nohagasclick" type="button" value="No click plz">
+    </div>
+    <div class="contenedor-contador">
+        <div class="counter">
+            <button id="pabajo">-</button>
+            <label id="contar">0</label>
+            <button id="parriba">+</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <div class="container">
+    </div>
+    <script src="la-magia-del-color.js"></script>
+    
+
+    <div id="dadohide">
+        <div id="izq"></div>
+        <div id="dcha">
+            <table id="tabla-dados">
+                <tr>
+                    <td><button onclick="dado1()" id="dadorojo"><img src="dice.png" alt=""></button></td>
+                    <td><button onclick="dado2()" id="dadoverde"><img src="dice.png" alt=""></button></td>
+                </tr>
+                <tr>
+                    <td id="tirada1"></td>
+                    <td id="tirada2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="borrarTiradas()" id="reload"><img src="loop.png" alt=""></button></td>
+                </tr>
+            </table>
+        </div>
+        <footer style="font-weight: bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">ES MAGIA :)</footer>
+    </div>
+
+
+</body>
+</html>
