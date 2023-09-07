@@ -7,30 +7,36 @@ const hazclick = document.getElementById("hazclick");
 
 //Hacemos que los elementos interactúen con el contador del HTML y el generador de colores
 
-parriba.addEventListener("click", () => {contar.innerHTML++; });
+parriba.addEventListener("click", () => { contar.innerHTML++; });
 
-pabajo.addEventListener("click", () => { contar.innerHTML--; });
+pabajo.addEventListener("click", () => {
+    if (contar.innerHTML <= 0) {
+        contar.innerHTML = 0;
+    }
+    else {
+        contar.innerHTML--;
+    };
+});
 
-reset.addEventListener("click", () => {contar.innerHTML = 0;});
+reset.addEventListener("click", () => { contar.innerHTML = 0; });
 
-hazclick.addEventListener("click", () => {contar.innerHTML++;});
-
+hazclick.addEventListener("click", () => { contar.innerHTML++; });
 
 
 //Declaramos la función que maneja el primer dado
 function dado1() {
-    var num1 = Math.ceil(Math.random()*6);
-    document.getElementById('tirada1').innerHTML=num1;
+    var num1 = Math.ceil(Math.random() * 6);
+    document.getElementById('tirada1').innerHTML = num1;
 }
 
 //Declaramos la función que maneja el segundo dado
 function dado2() {
-    var num2 = Math.ceil(Math.random()*6);
-    document.getElementById('tirada2').innerHTML=num2;
+    var num2 = Math.ceil(Math.random() * 6);
+    document.getElementById('tirada2').innerHTML = num2;
 }
 
 //Borramos las tiradas de dados hechas con las 2 funciones anteriores
 function borrarTiradas() {
-    document.getElementById('tirada1').innerHTML='';
-    document.getElementById('tirada2').innerHTML='';
+    document.getElementById('tirada1').innerHTML = '';
+    document.getElementById('tirada2').innerHTML = '';
 }

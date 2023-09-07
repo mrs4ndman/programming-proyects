@@ -1,13 +1,25 @@
-body{
+body {
     margin: 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#generador{
+#generador { text-align: center; }
+#colorin {
     text-align: center;
+    align-self: center;
+    vertical-align: middle;
 }
 
-#colorin { text-align: center; }
+#userNumber {
+    font-size: 1rem;
+    color: black;
+    background-color: cornflowerblue;
+    padding: 1rem;
+    border: 1px blue solid;
+    border-radius: 0.5rem;
+    float: right;
+    width: auto;
+}
 
 #hazclick {
     font-size: 1rem;
@@ -36,7 +48,7 @@ body{
 }
 
 .color-container {
-    background-color: orange;
+    background-color: none;
     width: 200px;
     height: 100px;
     color: antiquewhite;
@@ -50,12 +62,13 @@ body{
     border-radius: 5px;
 }
 
-.color-press {
-    align-items: center;
-}
 
 /* ________________________________ */
 
+
+.color-press {
+    align-items: center;
+}
 
 .contenedor-contador {
     justify-content: center;;
@@ -82,14 +95,12 @@ body{
 }
 
 
+/* ________________________________ */
+
+
 #dadohide {
-    
     position: relative;
     align-items: center;
-}
-
-#tabla-dados {
-    
 }
 
 #dadorojo {

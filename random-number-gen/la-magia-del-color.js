@@ -1,41 +1,59 @@
 const contenedorElem = document.querySelector(".container");
+const amountToGenerateInput = document.getElementById("userNumber")
+const colorizerButton = document.getElementById("hazclick")
+let colorContenedorElements
 
-for (let index = 0; index < 200; index++) {
-    const colorContenedorElem = document.createElement("div");
-    colorContenedorElem.classList.add("color-container");
-    contenedorElem.appendChild(colorContenedorElem);
-}
-
-const colorContenedorElements = document.querySelectorAll(".color-container");
+amountToGenerateInput.addEventListener("input", generadorIndivColor)
+colorizerButton.addEventListener("input", randColorgen)
 
 generadorIndivColor()
+randColorgen()
 
-document.getElementById("hazclick").onclick = generadorIndivColor;
+document.getElementById("hazclick").onclick = randColorgen;
 
+function generadorIndivColor() {
+    const amountToGenerate = parseInt(amountToGenerateInput.value);
+    contenedorElem.innerHTML = '';
 
-function generadorIndivColor(){
+    for (let index = 0; index < amountToGenerate; index++) {
+        const colorContenedorElem = document.createElement("div");
+        colorContenedorElem.classList.add("color-container");
+        contenedorElem.appendChild(colorContenedorElem);
+    }
+    colorContenedorElements = document.querySelectorAll(".color-container");
+}
+
+function randColorgen() {
     colorContenedorElements.forEach(
         (colorContenedorElem) => {
-        const nuevoCodigoColor = ColorAleatorium();
-        colorContenedorElem.style.backgroundColor = "#" + nuevoCodigoColor;
+            const nuevoCodigoColor = ColorAleatorium();
+            colorContenedorElem.style.backgroundColor = "#" + nuevoCodigoColor;
+        });
+}
+
+function colorClearing() {
+    colorContenedorElements.forEach(
+        (colorContenedorElem) => {
+            colorContenedorElem.style.backgroundColor = "#FFFFFF";
     });
 }
 
-function ColorAleatorium(){
+document.getElementById("reset").onclick = colorClearing
+
+function ColorAleatorium() {
     const caracter = "0123456789abcdef";
-    const LongitudCodigoColor = 6;
+    const longitudCodigoColor = 6;
     let codigoColor = "";
-    for (let index = 0; index < LongitudCodigoColor; index++) {
+    for (let index = 0; index < longitudCodigoColor; index++) {
         const numeroaleat = Math.floor(Math.random() * caracter.length);
         codigoColor += caracter.substring(numeroaleat, numeroaleat + 1);
     }
-        return codigoColor;
-    
+    return codigoColor;
 }
 
 
 
-var hide = document.getElementById("nohagasclick"); 
+var hide = document.getElementById("nohagasclick");
 
 nohagasclick.onclick = function() {
     var div = document.getElementById('dadohide');
