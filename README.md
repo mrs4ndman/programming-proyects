@@ -18,3 +18,4 @@
 
 - **DA1D1A-stuff**
     - PSeInt (pseudo-code) assignments from my CS degree.
+    - PSeInt-config.png → Configuración para el editor.
