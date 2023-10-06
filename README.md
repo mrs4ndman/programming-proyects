@@ -14,3 +14,7 @@
 
 - **low-level**
     - Assembly, C and other stuff I'm trying out
+<br>
+
+- **DA1D1A-stuff**
+    - PSeInt (pseudo-code) assignments from my CS degree.
